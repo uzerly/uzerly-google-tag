@@ -1,0 +1,5 @@
+homepage: "https://uzerly.fr/fr/"
+documentation: "https://app.uzerly.fr/documentation/gtm"
+versions:
+  - sha: 
+    changeNotes: Initial Version

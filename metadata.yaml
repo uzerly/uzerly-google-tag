@@ -1,5 +1,5 @@
 homepage: "https://uzerly.fr/fr/"
 documentation: "https://app.uzerly.fr/documentation/gtm.pdf"
 versions:
-  - sha: 
+  - sha: d68c7515f84bc506c1be64df1e030e22aaf07c92
     changeNotes: Initial Version

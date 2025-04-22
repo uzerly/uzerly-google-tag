@@ -5,7 +5,6 @@ Template Gallery Developer Terms of Service available at
 https://developers.google.com/tag-manager/gallery-tos (or such other URL as
 Google may provide), as modified from time to time.
 
-
 ___INFO___
 
 {
@@ -449,6 +448,8 @@ const l = 'cibleclic_pta';
 const i = data.offer_ID;
 const g = data.advertiser_ID;
 const sendPixel = require('sendPixel');
+const encodeUriComponent = require('encodeUriComponent');
+const encodeUri = require('encodeUri');
 
 var page = data.page ? data.page : '';
 var email = data.email ? data.email : ''; 
@@ -505,7 +506,7 @@ product_image: product_image, product_description: product_description, gdpr_con
     
 
 // Get the URL the user input into the text field
-const url = 'https://' + i + '.userly.net/cl.js?id=' + i + '&ad=' + g;
+const url = 'https://' + encodeUri(i) + '.userly.net/cl.js?id=' + encodeUriComponent(i) + '&ad=' + encodeUriComponent(g);
 
 //let w = copyFromWindow('cibleclic_pta');
 setInWindow('cibleclic_pta', [{'tag.start': getTimestampMillis(),  event: 'tag.js', id:i ,ad:g }]);
